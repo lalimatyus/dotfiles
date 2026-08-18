@@ -1,0 +1,7 @@
+sudo pacman -S nerd-fonts lua waybar hyprpaper thunar adw-gtk-theme nwg-look rofi fish fastfetch
+
+hyprpm update
+
+hyprpm add https://github.com/levnikmyskin/hyprland-virtual-desktops
+
+hyprpm enable hyprland-virtual-desktops

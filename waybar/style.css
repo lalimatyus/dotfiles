@@ -1,0 +1,116 @@
+* {
+  margin: 0 6px;
+  padding: 0;
+  min-height: 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+window#waybar {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+#custom-left,
+#custom-center,
+#custom-right {
+    padding: 0 16px;
+    color: #cdd6f4;
+}
+
+#custom-left {
+    font-weight: bold;
+    color: #89b4fa;
+}
+
+
+/* =================================
+   vDesk
+   ================================= */
+
+#waybar-vd button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+/* Virtual Desktop Module Container */
+#waybar-vd {
+    padding: 0px 5px;
+}
+
+/* Reset button defaults for clean styling */
+#waybar-vd button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 2px 8px;
+    margin: 0 2px;
+    border-radius: 4px;
+    color: rgba(205, 189, 255, 0.4);
+    font-weight: normal;
+    /* Smooth transitions for all interactions */
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Focused Virtual Desktop */
+#waybar-vd .vdesk-focused {
+    color: #cdbdff;
+    font-weight: bold;
+    background-color: rgba(205, 189, 255, 0.1);
+}
+
+/* Unfocused Virtual Desktop */
+#waybar-vd .vdesk-unfocused {
+    color: rgba(205, 189, 255, 0.3);
+    font-weight: normal;
+}
+
+/* Animation States */
+#waybar-vd button.creating {
+    opacity: 0;
+}
+
+#waybar-vd button.destroying {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Hidden Virtual Desktops */
+#waybar-vd button.hidden {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* =================================
+   ARCH POWER MENU
+   ================================= */
+
+#group-power {
+    margin: 0;
+    padding: 0;
+}
+
+#custom-arch {
+    color: #89b4fa;
+    font-size: 20px;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#custom-poweroff,
+#custom-reboot,
+#custom-logout {
+    color: #cdd6f4;
+    font-size: 16px;
+    padding: 0 8px;
+    margin: 0 2px;
+}
+
+#custom-poweroff:hover,
+#custom-reboot:hover,
+#custom-logout:hover {
+    color: #89b4fa;
+}

@@ -1,0 +1,105 @@
+{
+  "layer": "top",
+  "height": 42,
+  "spacing": 6,
+  "include": [],
+
+//--------------------------------------------------
+
+  "modules-left": [
+      "group/power"
+  ],
+
+  "group/power": {
+      "orientation": "horizontal",
+
+      "drawer": {
+          "transition-duration": 250,
+          "click-to-reveal": false,
+          "transition-left-to-right": true
+      },
+
+      "modules": [
+          "custom/arch",
+          "custom/poweroff",
+          "custom/reboot",
+          "custom/logout"
+      ]
+  },
+
+  "custom/arch": {
+      "format": "",
+      "tooltip": false
+  },
+
+  "custom/poweroff": {
+      "exec": "echo '⏻'",
+      "interval": 3600,
+      "on-click": "systemctl poweroff",
+      "tooltip": true,
+      "tooltip-format": "Shut Down"
+  },
+
+  "custom/reboot": {
+      "exec": "echo ''",
+      "interval": 3600,
+      "on-click": "systemctl reboot",
+      "tooltip": true,
+      "tooltip-format": "Restart"
+  },
+
+  "custom/logout": {
+      "exec": "echo ''",
+      "interval": 3600,
+      "on-click": "hyprctl dispatch 'hl.dsp.exit()'",
+      "tooltip": true,
+      "tooltip-format": "Logout"
+  },
+
+//--------------------------------------------------
+
+  "modules-center": ["cffi/virtual-desktops"],
+
+    "cffi/virtual-desktops": {
+      "module_path": "./modules/libwaybar_vd.so",
+      "format": "{id}",
+      "show_empty": true,
+      "tooltip": false
+  },
+
+//--------------------------------------------------
+
+  "modules-right": [
+    "battery",
+    "pulseaudio",
+    "clock"
+  ],
+
+	"battery": {
+        	"states": {
+            		"warning": 30,
+            		"critical": 15
+        	},
+        	"format": "{icon} {capacity}%",
+        	"format-charging": " {capacity}%",
+        	"format-plugged": "{capacity}%",
+        	"format-alt": "{time} {icon}",
+        	"format-full": " {capacity}%",
+        	"format-icons": ["", "", "", ""]
+	},
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""]
+    },
+    "scroll-step": 5
+  },
+
+  "clock": {
+    "format": "  {:%Y-%m-%d   %H:%M}",
+    "interval": 60,
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  }
+}
