@@ -100,6 +100,6 @@
   "clock": {
     "format": "  {:%Y-%m-%d   %H:%M}",
     "interval": 60,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip": false
   }
 }

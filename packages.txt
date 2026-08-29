@@ -1,4 +1,4 @@
-sudo pacman -S nerd-fonts lua waybar hyprpaper thunar adw-gtk-theme nwg-look rofi fish fastfetch
+sudo pacman -S nerd-fonts lua waybar hyprpaper thunar adw-gtk-theme nwg-look rofi fish fastfetch pavucontrol
 
 hyprpm update
 
